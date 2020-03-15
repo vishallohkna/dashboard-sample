@@ -1,0 +1,38 @@
+<div class="members">
+	<div class="members-header">
+		<h1>Members</h1>
+	</div>
+	<div class="members-search">
+		<app-search-box></app-search-box>
+	</div>
+	<div class="members-content">
+		<table>
+			<thead>
+				<tr>
+					<th>Peer Name</th>
+					<th>Owned by</th>
+					<th>Date Joined</th>
+					<th>Role</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let item of customArray | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+					<td>Vinod Kumar</td>
+					<td>Organization..</td>
+					<td>25-2-2019 08:24:00</td>
+					<td>Operator</td>
+					<td><i class="fa fa-trash-o"></i> Remove</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="pagination-block">
+			Showing {{(page * pageSize) - (pageSize - 1)}} - {{page * pageSize}} of 15
+			<ngb-pagination
+			[(page)]="page"
+			[pageSize]="pageSize"
+			[collectionSize]="15">
+			</ngb-pagination>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,38 @@
+@import "~variables.scss";
+
+:host{
+	background: $grey-bg;
+	height: 100%;
+	overflow: auto;
+}
+.empty-white-strip{
+	height: 35px;
+	background: $white;
+}
+.dashboard-banner{
+	background: $blue-bg;
+	padding: 10px 40px;
+	color: $white;
+	border-top: 1px solid $border-dark;
+	h1{
+		font-size: 18px;
+	    font-weight: 400;
+    	letter-spacing: 1px;
+	}
+	p{
+		margin: 30px 0 15px 0;
+	    font-size: 15px;
+	    font-weight: 300;
+	    letter-spacing: 1px;
+	}
+}
+.channel-details,
+.tables{
+	display: flex;
+    background: $white;
+    margin: 25px;
+    border-radius: 5px;
+}
+.tables{
+	flex-flow: column;
+}

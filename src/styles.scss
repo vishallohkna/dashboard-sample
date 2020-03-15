@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+@import "~variables.scss";
+
+html, body{
+	height: 100%;
+}
+
+/* Pagination CSS Override */
+ngb-pagination li{
+	display: none;
+	&:first-child{
+		display: block;
+		margin-right: 15px;
+		a {
+			span {
+				display: none;
+			}
+			&:before {
+				content: '\2039';
+			}
+		}
+	}
+	&:last-child{
+		display: block;
+		a {
+			span {
+				display: none;
+			}
+			&:before {
+				content: '\203A';
+			}
+		}
+	}
+	a{
+		padding: 0 10px !important;
+    	border: none !important;
+    	background-color: $grey-bg !important;
+    	margin-top: 0px !important;
+    	outline: none !important;
+    	color: $blue-text !important;
+	}
+	&.disabled a{
+		color: $grey-text !important;	
+	}
+}
+.pagination{
+	margin: 0 0 0 10px;
+}
+.pagination-block{
+	display: flex;
+    align-items: center;
+    margin: 15px 0 0 0;
+    font-size: 14px;
+}

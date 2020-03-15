@@ -1,0 +1,73 @@
+@import "~variables.scss";
+
+:host{
+	width: 100%;
+}
+.details{
+	.details-header{
+		display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	    padding: 10px 20px;
+	    border-bottom: 2px solid $border-dark;
+	    .left,
+	    .right{
+	    	display: flex;
+    		align-items: center;
+	    }
+	    .right{
+	    	.action-button{
+	    		display: flex;
+			    flex-flow: column;
+			    align-items: center;
+			    &:nth-child(1),
+			    &:nth-child(2){
+			    	margin-right: 25px;
+			    }
+			    &:hover{
+			    	cursor: pointer;
+			    }
+			    label{
+	    			font-size: 11px;
+    				color: $blue-text;
+    				&:hover{
+    					cursor: pointer;
+    				}
+	    		}
+	    	}
+	    }
+	    .left{
+	    	h1{
+	    		font-size: 20px;
+			    font-weight: 600;
+			    margin: 0 0 0 10px;
+			    color: $blue-text;
+	    	}
+	    }
+	}
+	.details-content{
+		padding: 10px 20px;
+		table{
+			width: 100%;
+		}
+		thead{
+			tr{
+				th{
+					color: $grey-text;
+					font-size: 15px;
+					font-weight: 400;
+				}
+			}
+		}
+		tbody{
+			tr{
+				td{
+					padding-top: 10px;
+					&:last-child{
+						color: $blue-text;
+					}
+				}
+			}
+		}
+	}
+}

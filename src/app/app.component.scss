@@ -1,0 +1,10 @@
+:host{
+	display: flex;
+	height: 100%;
+}
+:host app-sidebar{
+	width: 200px;
+}
+:host app-dashboard{
+	width: calc(100% - 200px);
+}

@@ -1,0 +1,42 @@
+@import "~variables.scss";
+
+.sidebar{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 200px;
+	height: 100%;
+	padding: 10px 5px;
+	background: $sidebar-bg;
+	img{
+		margin-top: 25px;
+		padding-bottom: 15px;
+		border-bottom: 2px solid rgba(82, 85, 90, 1);
+	}
+	ul.menu{
+		width: 100%;
+		list-style: none;
+	    padding: 0;
+	    margin: 50px 0 0 0;
+	    color: $white;
+	    font-size: 12px;
+	    font-weight: 400;
+	    letter-spacing: 1px;
+	    li{
+	    	padding: 5px 0 5px 25px;
+	    	margin: 0px 0px 10px 0;
+	    	i{
+	    		font-size: 16px;
+	    		margin-right: 10px;
+	    	}
+	    	&:hover{
+	    		cursor: pointer;
+	    		background: $dark-text;
+	    	}
+	    	&.active{
+	    		background: $dark-text;	
+	    	}
+	    }
+	}
+}
